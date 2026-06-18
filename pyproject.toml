@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mcp-tool-contract"
-version = "0.1.0"
+version = "0.1.1"
 description = "Shared taxonomies and decorator for MCP tools to self-declare ADR 0016 Layer-1 facts (risk, content trust, idempotency, lifecycle)."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -21,6 +21,9 @@ dev = [
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+mcp_tool_contract = ["py.typed"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
